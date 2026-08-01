@@ -3,6 +3,15 @@ import threading
 import time
 import pyautogui
 import pydirectinput
+import sys
+import os
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 futtatas = True
 Gombok = ['w','s']
@@ -10,7 +19,7 @@ Gombok = ['w','s']
 #Ez maga az alkalmazás, amit az "app" váétozóban mentünk el
 app = ctk.CTk()
 ctk.set_appearance_mode("dark")
-app.title("Roxána † Version 1.0")
+app.title("Roxána † Version 1.0.1")
 app.geometry("400x300")
 
 #Ez a felso szoveg
