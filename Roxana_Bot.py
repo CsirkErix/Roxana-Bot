@@ -19,7 +19,7 @@ Gombok = ['w','s']
 #Ez maga az alkalmazás, amit az "app" váétozóban mentünk el
 app = ctk.CTk()
 ctk.set_appearance_mode("dark")
-app.title("Roxána † Version 1.0.1")
+app.title("Roxána † Version 1.0.2")
 app.geometry("400x300")
 
 #Ez a felso szoveg
@@ -37,7 +37,7 @@ def leallitas():
 def botfuttatas():
     while futtatas:
         try:
-                gomb_helye = pyautogui.locateCenterOnScreen('Reconnect.png', confidence=0.8)
+                gomb_helye = pyautogui.locateCenterOnScreen(resource_path('Reconnect.png'), confidence=0.8)
                 print("Újracsatlakozás folyamatban...")
         
                 pydirectinput.click(gomb_helye.x, gomb_helye.y)
